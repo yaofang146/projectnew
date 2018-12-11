@@ -5,9 +5,13 @@ import Firstpage from '@/pages/Firstpage'
 import Regist from '@/pages/Regist'
 import first from '@/components/first'
 import customer from '@/components/customer'
+import myfriend from '@/components/my'
+
 
 import project from '@/components/children/project'
 import message from '@/components/children/message'
+import invalid from '@/components/children/invalid'
+
 
 Vue.use(Router)
 
@@ -34,8 +38,15 @@ export default new Router({
         {
           path:'customer',
           component:customer,
-          children:[{path:'message',component:message}]
-        }
+          children:[
+            {path:'message',component:message},
+            {path:'invalid',component:invalid}
+        ]
+        },
+        {
+          path:'myfriend',
+          component:myfriend,
+        },
       ]
     },
     {

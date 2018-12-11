@@ -15,6 +15,8 @@
 <script>
 import first from '@/components/first'
 import customer from '@/components/customer'
+import myfriend from '@/components/my'
+
 export default {
   name: 'Firstpage',
   data () {
@@ -22,7 +24,7 @@ export default {
       msg: ''
     }
   },
-  components:{first},
+  components:{first,customer,myfriend},
 }
 </script>
 
@@ -48,8 +50,9 @@ flex-grow: 1;
  max-height: 86%;
 overflow: hidden;
 box-shadow: 0 5px 5px #ccc; 
-    display: flex;
-    flex-direction: column;
+display: flex;
+flex-direction: column;
+flex-basis: 0;
 }
 div.menu ul{
 display:flex;
